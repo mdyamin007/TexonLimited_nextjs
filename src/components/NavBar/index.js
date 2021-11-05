@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import NavLink from "../NavLink";
 
 const NavBar = () => {
+  const menus = [
+    { menu: "Home", subMenus: ["Home1", "Home2", "Home3", "Home4"] },
+    { menu: "News", subMenus: ["Right Sidebar", "Left Sidebar"] },
+    {
+      menu: "Services",
+      subMenus: [
+        "Digital marketing",
+        "Graphic design",
+        "Security systems",
+        "Internet services",
+        "Optimizing System",
+        "Web development",
+      ],
+    },
+    {
+      menu: "Pages",
+      subMenus: ["About us", "Careers", "Team", "Contact", "FAQ"],
+    },
+    { menu: "Shop", subMenus: ["Products", "Cart", "Checkout", "My account"] },
+    { menu: "Contact" },
+  ];
+
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        {/* Logo and Brand Name  */}
         <a
           href="/"
           className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
@@ -23,101 +47,18 @@ const NavBar = () => {
           <span className="ml-3 text-3xl font-extrabold">Texon Limited</span>
         </a>
 
+        {/* Nav Links */}
         <nav className="md:ml-auto flex flex-wrap items-center text-xl justify-center font-semibold">
-          <a className="cursor-pointer mr-5 hover:text-gray-900">
-            Home
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-          <a className="cursor-pointer mr-5 hover:text-gray-900">
-            News
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-          <a className="cursor-pointer mr-5 hover:text-gray-900">
-            Services
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-          <a className="cursor-pointer mr-5 hover:text-gray-900">
-            Pages
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-          <a className="cursor-pointer mr-5 hover:text-gray-900">
-            Shop
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-          <a className="cursor-pointer mr-5 hover:text-gray-900">
-            Contact
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 inline"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
+          {menus.map((menu) => (
+            <NavLink menu={menu} />
+          ))}
         </nav>
-
+        {/* Search & Cart Logo  */}
         <div className="flex">
-          <a role="button" className="mr-3">
+          <a
+            role="button"
+            className="ml-4 transition-transform duration-300 ease-in-out transform hover:rotate-90"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -133,7 +74,10 @@ const NavBar = () => {
               />
             </svg>
           </a>
-          <a role="button" className="relative flex mr-3">
+          <a
+            role="button"
+            className="relative flex ml-4 transition-transform duration-300 ease-in-out transform hover:scale-105"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -152,7 +96,10 @@ const NavBar = () => {
               0
             </span>
           </a>
-          <a role="button" className="mr-3">
+          <a
+            role="button"
+            className="ml-4 transition-transform duration-300 ease-in-out transform hover:scale-125"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -169,7 +116,9 @@ const NavBar = () => {
             </svg>
           </a>
         </div>
-        <button className="bg-blue-700 text-white px-4 py-2 rounded text-lg hover:bg-blue-800">
+
+        {/* Button */}
+        <button className="bg-blue-700 text-white ml-4 px-4 py-2 rounded text-lg hover:bg-blue-800">
           Start now!
         </button>
       </div>
