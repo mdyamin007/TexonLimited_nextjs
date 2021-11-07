@@ -1,6 +1,7 @@
 import React from "react";
+import SideNavBar from "../SideNavBar";
 
-const SideBar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
+const SideBar = ({ sideBarIsOpen, setSideBarIsOpen, menus }) => {
   return (
     <>
       {sideBarIsOpen && (
@@ -42,8 +43,10 @@ const SideBar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
             </svg>
           </div>
         </div>
-        <div className="md:hidden">NavLinks</div>
-        <div className="container my-6">
+        <div className="lg:hidden">
+          <SideNavBar menus={menus} />
+        </div>
+        <div className="w-full my-6">
           <h2 className="text-gray-600 text-2xl mb-1 px-8 font-semibold">
             Contact Info
           </h2>
@@ -52,7 +55,7 @@ const SideBar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
             <div className="w-4 bg-blue-900 h-0.5 ml-8 my-2"></div>
           </div>
         </div>
-        <div className="container text-gray-600 py-4 px-10 text-xl">
+        <div className="w-full text-gray-600 py-4 px-10 text-xl">
           <div className="flex space-x-4 mb-10">
             <svg
               xmlns="http://www.w3.org/2000/svg"

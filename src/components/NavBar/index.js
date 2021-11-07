@@ -1,54 +1,34 @@
 import React, { useState } from "react";
 import NavLink from "../NavLink";
 
-const NavBar = ({ setSideBarIsOpen }) => {
-  const menus = [
-    { menu: "Home", subMenus: ["Home1", "Home2", "Home3", "Home4"] },
-    { menu: "News", subMenus: ["Right Sidebar", "Left Sidebar"] },
-    {
-      menu: "Services",
-      subMenus: [
-        "Digital marketing",
-        "Graphic design",
-        "Security systems",
-        "Internet services",
-        "Optimizing System",
-        "Web development",
-      ],
-    },
-    {
-      menu: "Pages",
-      subMenus: ["About us", "Careers", "Team", "Contact", "FAQ"],
-    },
-    { menu: "Shop", subMenus: ["Products", "Cart", "Checkout", "My account"] },
-    { menu: "Contact" },
-  ];
-
+const NavBar = ({ setSideBarIsOpen, menus }) => {
   return (
     <header className="text-gray-600 body-font">
-      <div className="container mx-auto flex fixed z-10 flex-wrap p-5 flex-col md:flex-row items-center">
+      <div className="w-full flex justify-between fixed z-10 py-5 px-5 lg:px-12 items-center">
         {/* Logo and Brand Name  */}
-        <a
-          href="/"
-          className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-            viewBox="0 0 24 24"
+        <div>
+          <a
+            href="/"
+            className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
           >
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-          </svg>
-          <span className="ml-3 text-3xl font-extrabold">Texon Limited</span>
-        </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span className="ml-3 text-3xl font-extrabold">Texon Limited</span>
+          </a>
+        </div>
 
         {/* Nav Links */}
-        <nav className="md:ml-auto flex flex-wrap items-center text-xl justify-center font-semibold">
+        <nav className="md:ml-auto hidden lg:flex flex-wrap items-center text-xl justify-center font-semibold">
           {menus.map((menu) => (
             <NavLink menu={menu} />
           ))}
@@ -119,7 +99,7 @@ const NavBar = ({ setSideBarIsOpen }) => {
         </div>
 
         {/* Button */}
-        <button className="bg-blue-700 text-white ml-4 px-4 py-2 rounded text-lg hover:bg-blue-800">
+        <button className="bg-blue-700 hidden lg:inline text-white ml-4 px-4 py-2 rounded text-lg hover:bg-blue-800">
           Start now!
         </button>
       </div>
