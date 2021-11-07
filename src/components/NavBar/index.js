@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavLink from "../NavLink";
 
-const NavBar = () => {
+const NavBar = ({ setSideBarIsOpen }) => {
   const menus = [
     { menu: "Home", subMenus: ["Home1", "Home2", "Home3", "Home4"] },
     { menu: "News", subMenus: ["Right Sidebar", "Left Sidebar"] },
@@ -26,7 +26,7 @@ const NavBar = () => {
 
   return (
     <header className="text-gray-600 body-font">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <div className="container mx-auto flex fixed z-10 flex-wrap p-5 flex-col md:flex-row items-center">
         {/* Logo and Brand Name  */}
         <a
           href="/"
@@ -98,6 +98,7 @@ const NavBar = () => {
           </a>
           <a
             role="button"
+            onClick={() => setSideBarIsOpen(true)}
             className="ml-4 transition-transform duration-300 ease-in-out transform hover:scale-125"
           >
             <svg
