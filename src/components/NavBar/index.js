@@ -3,8 +3,8 @@ import NavLink from "../NavLink";
 
 const NavBar = ({ setSideBarIsOpen, menus }) => {
   return (
-    <header className="text-gray-600 body-font">
-      <div className="bg-white w-full flex justify-between fixed z-10 py-5 px-5 lg:px-12 items-center">
+    <header className="text-gray-600 body-font ">
+      <div className=" z-40 bg-white w-full flex justify-between fixed z-10 py-5 px-5 lg:px-12 items-center">
         {/* Logo and Brand Name  */}
         <div>
           <a

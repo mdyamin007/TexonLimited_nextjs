@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import About from "../../components/About";
 import Hero from "../../components/Hero";
 import NavBar from "../../components/NavBar";
+import Services from "../../components/Services";
 import SideBar from "../../components/SideBar";
 
 const HomePage = () => {
@@ -36,6 +38,8 @@ const HomePage = () => {
         menus={menus}
       />
       <Hero />
+      <Services />
+      <About />
     </>
   );
 };
