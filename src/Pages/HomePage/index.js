@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import About from "../../components/About";
+import Banner from "../../components/Banner";
 import Hero from "../../components/Hero";
+import Hero2 from "../../components/Hero2";
 import NavBar from "../../components/NavBar";
 import Services from "../../components/Services";
 import Services2 from "../../components/Services2";
 import SideBar from "../../components/SideBar";
+import WhatWeDo from "../../components/WhatWeDo";
 
 const HomePage = () => {
   const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
@@ -42,6 +45,9 @@ const HomePage = () => {
       <Services />
       <About />
       <Services2 />
+      <WhatWeDo />
+      <Banner />
+      <Hero2 />
     </>
   );
 };
