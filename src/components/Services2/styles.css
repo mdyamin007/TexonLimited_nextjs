@@ -1,0 +1,44 @@
+.bg-wave-overlay-black {
+  background-image: url(https://jahangirseven.com/uptech/wp-content/uploads/sites/19/2020/12/pexels-ivy-son-3490393-1-scaled-1.jpg);
+  background-repeat: no-repeat;
+  opacity: 0.04;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-shape[data-negative="true"].elementor-shape-top {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.elementor-shape-top {
+  top: -1px;
+}
+
+.elementor-shape-top svg {
+  height: 38px;
+}
+
+.elementor-shape svg {
+  display: block;
+  width: -webkit-calc(100% + 1.3px);
+  width: calc(100% + 1.3px);
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.elementor-shape {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+}

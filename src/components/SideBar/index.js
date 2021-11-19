@@ -5,7 +5,7 @@ const SideBar = ({ sideBarIsOpen, setSideBarIsOpen, menus }) => {
   return (
     <>
       {sideBarIsOpen && (
-        <div className="z-10 fixed inset-0 transition-opacity">
+        <div className="z-20 fixed inset-0 transition-opacity">
           <div
             className="absolute inset-0 bg-black opacity-50"
             onClick={() => setSideBarIsOpen(false)}

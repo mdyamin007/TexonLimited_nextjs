@@ -3,7 +3,7 @@ import "./styles.css";
 
 const About = () => {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font mb-32">
       <div className="relative">
         <div className="bg-wave-overlay w-full h-full z-0 absolute top-0 left-0"></div>
         <div className="relative container mx-auto flex px-5 py-24 z-10 md:flex-row flex-col items-center">

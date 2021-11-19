@@ -3,6 +3,7 @@ import About from "../../components/About";
 import Hero from "../../components/Hero";
 import NavBar from "../../components/NavBar";
 import Services from "../../components/Services";
+import Services2 from "../../components/Services2";
 import SideBar from "../../components/SideBar";
 
 const HomePage = () => {
@@ -40,6 +41,7 @@ const HomePage = () => {
       <Hero />
       <Services />
       <About />
+      <Services2 />
     </>
   );
 };

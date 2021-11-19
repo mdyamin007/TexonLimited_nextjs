@@ -78,7 +78,7 @@ const NavBar = ({ setSideBarIsOpen, menus }) => {
           </a>
           <a
             role="button"
-            onClick={() => setSideBarIsOpen(true)}
+            onClick={() => setSideBarIsOpen((prev) => !prev)}
             className="ml-4 transition-transform duration-300 ease-in-out transform hover:scale-125"
           >
             <svg
