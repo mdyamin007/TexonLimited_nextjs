@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Hero from "../../components/Hero";
 import NavBar from "../../components/NavBar";
 import SideBar from "../../components/SideBar";
 
@@ -34,6 +35,7 @@ const HomePage = () => {
         setSideBarIsOpen={setSideBarIsOpen}
         menus={menus}
       />
+      <Hero />
     </>
   );
 };
