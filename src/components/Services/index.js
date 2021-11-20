@@ -39,7 +39,7 @@ const Services = () => {
         <div className="relative w-full h-64">
           <img
             className="w-full h-full object-cover"
-            src="http://www.smartthingscentre.com/images/demo/course/web.jpg"
+            src="https://www.smartthingscentre.com/images/demo/course/web.jpg"
           />
           <div className="absolute w-full h-full top-0 left-0 bg-black bg-opacity-25 hover:bg-opacity-75 transition duration-500 ease-in-out"></div>
           <h1 className="absolute bottom-4 text-white font-bold text-xl left-16">
