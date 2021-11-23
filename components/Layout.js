@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
+import Footer from "../components/Footer";
 
 const Layout = ({ children }) => {
   const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Layout = ({ children }) => {
       subMenus: ["About us", "Careers", "Team", "Contact", "FAQ"],
     },
     { menu: "Shop", subMenus: ["Products", "Cart", "Checkout", "My account"] },
-    { menu: "Contact" },
+    { menu: "Contact", link: "/contact" },
   ];
 
   return (
@@ -35,6 +36,7 @@ const Layout = ({ children }) => {
         menus={menus}
       />
       {children}
+      <Footer />
     </>
   );
 };

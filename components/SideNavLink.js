@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 const SideNavLink = ({ menu }) => {
   const [show, setShow] = useState(false);
   if (!menu.subMenus) {
     return (
       <div className="flex justify-between py-2">
-        <p className="text-gray-700 text-lg">{menu.menu}</p>
+        <Link href={menu.link}>
+          <p className="text-gray-700 text-lg">{menu.menu}</p>
+        </Link>
       </div>
     );
   }

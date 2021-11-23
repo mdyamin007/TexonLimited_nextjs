@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 
 const NavLink = ({ menu }) => {
   const [active, setActive] = useState(false);
@@ -49,9 +50,11 @@ const NavLink = ({ menu }) => {
     return (
       <div className="relative inline-block text-left">
         <div className="transition-all duration-300 ease-in-out border-b border-transparent hover:border-b hover:border-blue-700">
-          <button className="inline-flex justify-center w-full px-2 py-2 bg-white text-lg text-gray-600 font-semibold hover:text-blue-800">
-            {menu.menu}
-          </button>
+          <Link href={menu.link}>
+            <button className="inline-flex justify-center w-full px-2 py-2 bg-white text-lg text-gray-600 font-semibold hover:text-blue-800">
+              {menu.menu}
+            </button>
+          </Link>
         </div>
       </div>
     );
