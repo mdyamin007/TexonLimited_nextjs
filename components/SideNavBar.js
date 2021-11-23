@@ -5,8 +5,8 @@ const SideNavBar = ({ menus }) => {
   return (
     <div className="py-10 px-6">
       <div className="flex flex-col space-y-2 divide-y divide-gray-200">
-        {menus.map((menu) => (
-          <SideNavLink menu={menu} />
+        {menus.map((menu, index) => (
+          <SideNavLink key={index} menu={menu} />
         ))}
       </div>
     </div>

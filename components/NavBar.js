@@ -29,8 +29,8 @@ const NavBar = ({ setSideBarIsOpen, menus }) => {
 
         {/* Nav Links */}
         <nav className="md:ml-auto hidden lg:flex flex-wrap items-center text-xl justify-center font-semibold">
-          {menus.map((menu) => (
-            <NavLink menu={menu} />
+          {menus.map((menu, index) => (
+            <NavLink key={index} menu={menu} />
           ))}
         </nav>
         {/* Search & Cart Logo  */}

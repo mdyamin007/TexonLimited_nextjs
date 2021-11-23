@@ -33,8 +33,11 @@ const NavLink = ({ menu }) => {
         >
           <div className="bg-white py-2 px-6 text-gray-600">
             {menu.subMenus &&
-              menu.subMenus.map((subMenu) => (
-                <div className="px-2 py-3 hover:bg-blue-100 hover:text-blue-600 font-normal">
+              menu.subMenus.map((subMenu, index) => (
+                <div
+                  key={index}
+                  className="px-2 py-3 hover:bg-blue-100 hover:text-blue-600 font-normal"
+                >
                   <a href="#">{subMenu}</a>
                 </div>
               ))}
