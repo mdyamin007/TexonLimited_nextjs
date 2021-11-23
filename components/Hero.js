@@ -1,5 +1,4 @@
 import React from "react";
-import heroImage from "../../assets/hero1.png";
 
 const Hero = () => {
   return (
@@ -28,7 +27,7 @@ const Hero = () => {
             <img
               className="object-cover object-center rounded"
               alt="hero"
-              src={heroImage}
+              src="/hero1.png"
             />
           </div>
         </div>

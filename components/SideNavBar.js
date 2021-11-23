@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SideNavLink from "../SideNavLink";
+import SideNavLink from "./SideNavLink";
 
 const SideNavBar = ({ menus }) => {
   return (

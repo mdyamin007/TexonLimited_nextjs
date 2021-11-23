@@ -1,15 +1,17 @@
-import React from "react";
-import "./styles.css";
-import ProgressBar from "../ProgressBar";
+import React, { useEffect } from "react";
+import ProgressBar from "./ProgressBar";
 
 const Skills = () => {
-  window.addEventListener("load", (e) => {
-    const progress_bars = document.querySelectorAll(".progress__bar");
-    progress_bars.forEach((progress_bar) => {
-      progress_bar.classList.remove("-translate-x-full");
-      progress_bar.classList.add("translate-x-0");
+  useEffect(() => {
+    window.addEventListener("load", (e) => {
+      const progress_bars = document.querySelectorAll(".progress__bar");
+      progress_bars.forEach((progress_bar) => {
+        progress_bar.classList.remove("-translate-x-full");
+        progress_bar.classList.add("translate-x-0");
+      });
     });
-  });
+  }, []);
+
   return (
     <section className="relative">
       <img

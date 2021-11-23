@@ -1,8 +1,0 @@
-.bg-wave-overlay {
-  background-image: url(https://jahangirseven.com/uptech/wp-content/uploads/sites/19/2020/12/innersec-bck.png);
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.05;
-  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-}
