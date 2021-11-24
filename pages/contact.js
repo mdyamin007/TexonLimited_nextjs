@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import ContactBanner from "../components/ContactBanner";
-import ContactCard from "../components/ContactCard";
-import ContactInformation from "../components/ContactInformation";
-import ContactMap from "../components/ContactMap";
-import ContactAddressCards from "../components/ContactAddressCards";
-import ContactForm from "../components/ContactForm";
+import ContactInformation from "../components/Contact/ContactInformation";
+import ContactAddressCards from "../components/Contact/ContactAddressCards";
+import ContactForm from "../components/Contact/ContactForm";
+import Banner from "../components/Common/Banner";
+import Cards from "../components/Common/Cards";
+import Map from "../components/Common/Map";
 
 const contact = () => {
   return (
@@ -16,13 +16,15 @@ const contact = () => {
 
       <div className="bg-gray-100">
         <section className="relative">
-          <ContactBanner />
-          <ContactCard />
+          <Banner text={"Contact"} />
+          <Cards />
         </section>
-        <ContactInformation />
-        <ContactMap />
-        <ContactAddressCards />
-        <ContactForm />
+        <section>
+          <ContactInformation />
+          <Map />
+          <ContactAddressCards />
+          <ContactForm />
+        </section>
       </div>
     </>
   );

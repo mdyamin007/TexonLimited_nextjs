@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactMap = () => {
+const Map = () => {
   return (
     <div
       style={{
@@ -28,4 +28,4 @@ const ContactMap = () => {
   );
 };
 
-export default ContactMap;
+export default Map;

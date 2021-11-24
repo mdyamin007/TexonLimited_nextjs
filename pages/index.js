@@ -1,19 +1,19 @@
 import Head from "next/head";
 import React, { useState } from "react";
-import About from "../components/About";
-import Banner from "../components/Banner";
-import FAQ from "../components/FAQ";
-import Hero from "../components/Hero";
-import Hero2 from "../components/Hero2";
-import Hero3 from "../components/Hero3";
-import Pricing from "../components/Pricing";
-import Services from "../components/Services";
-import Services2 from "../components/Services2";
-import Skills from "../components/Skills";
-import Sponsors from "../components/Sponsors";
-import Team from "../components/Team";
-import Team2 from "../components/Team2";
-import WhatWeDo from "../components/WhatWeDo";
+import Pricing from "../components/Common/Pricing";
+import About from "../components/Home/About";
+import Banner from "../components/Home/Banner";
+import FAQ from "../components/Home/FAQ";
+import Hero from "../components/Home/Hero";
+import Hero2 from "../components/Home/Hero2";
+import Hero3 from "../components/Home/Hero3";
+import Services from "../components/Home/Services";
+import Services2 from "../components/Home/Services2";
+import Skills from "../components/Home/Skills";
+import Sponsors from "../components/Home/Sponsors";
+import Team from "../components/Home/Team";
+import Team2 from "../components/Home/Team2";
+import WhatWeDo from "../components/Home/WhatWeDo";
 
 export default function Home() {
   return (

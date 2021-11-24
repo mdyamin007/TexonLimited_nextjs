@@ -55,7 +55,9 @@ const SideNavLink = ({ menu }) => {
       {show && (
         <>
           {menu.subMenus.map((subMenu) => (
-            <div className="text-gray-700 text-lg py-4">{subMenu}</div>
+            <Link href={subMenu.link}>
+              <div className="text-gray-700 text-lg py-4">{subMenu.page}</div>
+            </Link>
           ))}
         </>
       )}

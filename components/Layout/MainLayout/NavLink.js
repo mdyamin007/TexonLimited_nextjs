@@ -39,7 +39,9 @@ const NavLink = ({ menu }) => {
                   key={index}
                   className="px-2 py-3 hover:bg-blue-100 hover:text-blue-600 font-normal"
                 >
-                  <a href="#">{subMenu}</a>
+                  <Link href={subMenu.link}>
+                    <a>{subMenu.page}</a>
+                  </Link>
                 </div>
               ))}
           </div>
